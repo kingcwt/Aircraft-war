@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="gameOver" previous="" next="" version="2.2">
+  <item type="instance" UID="137">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="400" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="BoundsOfRectBehaivor" name="边界限制">
+      <item valueDataType="number" value="0" name="boundType"/>
+      <item valueDataType="number" value="0" name="x"/>
+      <item valueDataType="number" value="-450" name="y"/>
+      <item valueDataType="number" value="0" name="width"/>
+      <item valueDataType="number" value="0" name="height"/>
+    </item>
+  </item>
+  <item type="variable" variableName="x" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="AISprite136"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22BOSS%22" name="18"/>
+    </item>
+  </item>
+</eventSheets>

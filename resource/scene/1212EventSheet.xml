@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="1212" previous="" next="" version="2.2">
+  <item type="instance" UID="116">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="200" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="1" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="114">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="400" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="1" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="111">
+    <item initValue="20" variableType="number" variableName="hp" type="variable"/>
+  </item>
+  <item type="instance" UID="59">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="400" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+  </item>
+  <item type="instance" UID="56">
+    <item initValue="3" variableType="number" variableName="hp" type="variable"/>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="1" name="type"/>
+    </item>
+    <item type="behavior" behaviorType="BoundsOfRectBehaivor" name="边界限制">
+      <item valueDataType="number" value="0" name="boundType"/>
+      <item valueDataType="number" value="0" name="x"/>
+      <item valueDataType="number" value="0" name="y"/>
+      <item valueDataType="number" value="0" name="width"/>
+      <item valueDataType="number" value="0" name="height"/>
+    </item>
+  </item>
+  <item type="instance" UID="53">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="400" name="speed"/>
+      <item valueDataType="number" value="100" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="-90" name="angle"/>
+      <item valueDataType="number" value="1" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+  </item>
+  <item type="instance" UID="50">
+    <item initValue="5" variableType="number" variableName="hp" type="variable"/>
+    <item type="behavior" behaviorType="DragDropBehaivor" name="拖拽">
+      <item valueDataType="number" value="0" name="axes"/>
+      <item valueDataType="number" value="1" name="enabled"/>
+    </item>
+    <item type="behavior" behaviorType="EightDirectionBehaivor" name="八向运动">
+      <item valueDataType="number" value="10000" name="maxSpeed"/>
+      <item valueDataType="number" value="1100" name="acceleration"/>
+      <item valueDataType="number" value="1200" name="deceleration"/>
+      <item valueDataType="number" value="2" name="directions"/>
+      <item valueDataType="number" value="0" name="angleMode"/>
+      <item valueDataType="number" value="1" name="defaultControls"/>
+      <item valueDataType="number" value="1" name="enabled"/>
+    </item>
+  </item>
+  <item type="instance" UID="47">
+    <item type="behavior" behaviorType="ScrollBehaivor" name="滚屏">
+      <item valueDataType="number" value="1" name="active"/>
+      <item valueDataType="string" value="%22scrollDown%22" name="scrollDirectionType"/>
+      <item valueDataType="number" value="180" name="speed"/>
+    </item>
+    <item type="behavior" behaviorType="TimerBehavior" name="计时器"/>
+  </item>
+  <item type="instance" UID="46">
+    <item type="behavior" behaviorType="ScrollBehaivor" name="滚屏">
+      <item valueDataType="number" value="1" name="active"/>
+      <item valueDataType="string" value="%22scrollDown%22" name="scrollDirectionType"/>
+      <item valueDataType="number" value="180" name="speed"/>
+    </item>
+    <item type="behavior" behaviorType="TimerBehavior" name="计时器"/>
+  </item>
+  <item type="variable" variableName="x" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="0.3" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="红红色战机">
+      <item valueDataType="string" value="AISprite52" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="-80" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="0.2" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="AISprite55">
+      <item valueDataType="string" value="AISprite58" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="0" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCreatedEvent" callName="onCreated" isTrigger="true" target="AISprite110"/>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="5" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="createObject" target="System">
+      <item valueDataType="string" value="AISprite110" name="23" isFamily="false"/>
+      <item valueDataType="number" value="0" name="22"/>
+      <item valueDataType="number" value="228" name="21"/>
+      <item valueDataType="number" value="200" name="20"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="AISprite52">
+      <item valueDataType="string" value="AISprite55" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="AISprite55">
+      <item valueDataType="string" value="hp" name="10" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="AISprite55">
+      <item valueDataType="string" value="hp" name="instanceVariable" variable="true"/>
+      <item valueDataType="string" value="%22lessOrEqual%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="AISprite55"/>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="AISprite58">
+      <item valueDataType="string" value="红红色战机" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="红红色战机">
+      <item valueDataType="string" value="hp" name="10" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="红红色战机">
+      <item valueDataType="string" value="hp" name="instanceVariable" variable="true"/>
+      <item valueDataType="string" value="%22lessOrEqual%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="红红色战机"/>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="2" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="AISprite55">
+      <item valueDataType="string" value="AISprite55" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="Math.random()*200" name="12"/>
+      <item valueDataType="number" value="Math.random()*100" name="13"/>
+      <item valueDataType="number" value="1" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnDestoryEvent" callName="onDestory" isTrigger="true" target="红红色战机"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22gameOver%22" name="18"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnKeyDownEvent" callName="onkeyDown" isTrigger="true" target="Keyboard">
+      <item valueDataType="number" value="32" name="key"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="onScenePauseOrPlay" target="System">
+      <item valueDataType="number" value="0" name="16"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnKeyReleasedEvent" callName="onkeyReleased" isTrigger="true" target="Keyboard">
+      <item valueDataType="number" value="16" name="key"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="onScenePauseOrPlay" target="System">
+      <item valueDataType="number" value="1" name="16"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="0.2" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="AISprite110">
+      <item valueDataType="string" value="bs1" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="0" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="0.2" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="AISprite110">
+      <item valueDataType="string" value="bs2" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="0" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="AISprite52">
+      <item valueDataType="string" value="AISprite110" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="AISprite110">
+      <item valueDataType="string" value="hp" name="10" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="AISprite110">
+      <item valueDataType="string" value="hp" name="instanceVariable" variable="true"/>
+      <item valueDataType="string" value="%22lessOrEqual%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="AISprite110"/>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnDestoryEvent" callName="onDestory" isTrigger="true" target="AISprite110"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22tongguan%22" name="18"/>
+    </item>
+  </item>
+</eventSheets>
